@@ -27,10 +27,8 @@ router.get('/', function (req, res, next) {
 
 router.get('/user', function (req, res, next) {
   MyModel.findOne({ name: 'Aimi' }, (err, user) => {
-    MyModel.findOne({ name: 'Aimi' }, (err, user) => {
-      console.log(user);
-      res.json({ user: user });
-    });
+    console.log(user);
+    res.json({ user: user });
   });
 });
 
